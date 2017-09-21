@@ -95,8 +95,8 @@ const onDisconnect = (sock) => {
 	socket.on('disconnect', (data) => {
 		//console.log(socket.name + ' Left the chat room');
 		io.sockets.in('room1').emit('msg', { name: 'server', msg: `${socket.name} has left the chat room` });
-		io.sockets.in('room1').emit('msg', { name: 'server', msg: `There are currently: ${Object.keys(users).length} users online`});
 		delete users[socket.id];
+		io.sockets.in('room1').emit('msg', { name: 'server', msg: `There are currently: ${Object.keys(users).length} users online`});
 	});
 };
 
