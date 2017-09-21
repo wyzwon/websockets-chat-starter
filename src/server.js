@@ -65,7 +65,7 @@ const onMsg = (sock) => {
       } else if ((data.msg[0] === '/') && (data.msg[1] === 'm') && (data.msg[2] === 'e') && (data.msg[3] === ' ')) { // I know there are better ways to do this but I'm tired and cant think enough to regex
         io.sockets.in('room1').emit('msg', { name: 'server', msg: `(${socket.name}) *${data.msg.substr(4)}*` });
       } else if ((data.msg[0] === '/') && (data.msg[1] === 'r') && (data.msg[2] === 'o') && (data.msg[3] === 'l') && (data.msg[4] === 'l') && (data.msg[5] === ' ')) {
-        const numInput = parseInt('10', data.msg.substr(6));
+        const numInput = parseInt(data.msg.substr(6), 10);
         const rollOutcome = Math.floor(((Math.random() * numInput) + 1));
         io.sockets.in('room1').emit('msg', { name: 'server', msg: `${socket.name} rolled a ${rollOutcome} on a ${numInput} sided die` });
       } else {
