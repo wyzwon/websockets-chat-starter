@@ -1,0 +1,31 @@
+{
+  "name": "websockets-chat-starter",
+  "version": "1.0.0",
+  "description": "websocket homework",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "test": "echo \"No Tests\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyzwon/websockets-chat-starter.git"
+  },
+  "keywords": [
+    "websockets"
+  ],
+  "author": "Thomas Bouffard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wyzwon/websockets-chat-starter/issues"
+  },
+  "homepage": "https://github.com/wyzwon/websockets-chat-starter#readme",
+  "dependencies": {
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.7.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
